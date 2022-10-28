@@ -1,0 +1,38 @@
+{
+    "categorias":[
+        {
+            "matricula":"0400105",
+            "nombre":"Panfilo Quebrado",
+            "direccion":"Mata #10",
+            "telefono":"228 8120293"
+        },
+        {
+            "matricula":"1104567",
+            "nombre":"Carmen Barrientos",
+            "direccion":"animas #705",
+            "telefono":"228 1102360"
+        },
+        {
+            "matricula":"1939874",
+            "nombre":"Susana Peralta",
+            "direccion":"Sumidero #340",
+            "telefono":"228 6936222"
+        }
+    ],
+    "inscripcion":[
+        {
+            "id":1,
+            "nombre":"Pedrito",
+            "direccion":"Juarez #55",
+            "nombrepadre":"Alejandro Sotis",
+            "nombremadre":"Veronica Diaz"
+        },
+        {
+            "id":2,
+            "nombre":"Jaimito",
+            "direccion":"Atenas veracruzana #205",
+            "nombrepadre":"Jose Primero",
+            "nombremadre":"Maria Curado"
+        }
+    ]
+}

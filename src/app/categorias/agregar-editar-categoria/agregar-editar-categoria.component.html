@@ -1,0 +1,56 @@
+<div class="container">
+
+    <div class="row mt-3">
+        <div class="col">
+            <h1>Agregar Categoría</h1>
+        </div>
+    </div>
+    <h1>Hola clase</h1>
+    <form [formGroup]="formulario" autocomplete="off" (ngSubmit)="guardar()">
+        <div class="row">
+            <div class="col-6">            
+
+                <mat-form-field class="w-100">
+                    <div><mat-label>Nombre: </mat-label>
+                    <input matInput formControlName="nombre"  /></div>
+
+                    <div><mat-label>Direccion: </mat-label>
+                    <input matInput formControlName="direccion"  /></div>
+
+                    <div><mat-label>Telefono: </mat-label>
+                    <input matInput formControlName="telefono"  /></div>
+                </mat-form-field>
+
+                <div *ngIf="(nombre?.dirty || nombre?.touched) && nombre?.errors">
+                    
+                    <mat-error *ngIf="nombre?.errors?.['required']">El nombre de la categoria es requerido</mat-error>
+
+                    <mat-error *ngIf="nombre?.errors?.['minLength']">Debe ser minimo de 5 caracteres</mat-error>
+                    
+                    <mat-error *ngIf="nombre?.errors?.['MaxLength']">El largo maximo es de 100 caracteres</mat-error>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button mat-raised-button 
+                    color="primary"
+                    type="submit"
+                    [disabled]="formulario.invalid"
+                    class="me-5">
+                    Guardar <mat-icon>save</mat-icon>
+                </button>
+                <button
+                    mat-reised-button
+                    color="secondary"
+                     [routerLink]="['/categorias']"
+                    type="button">
+                    Regresar <mat-icon>close</mat-icon>
+                </button>
+            </div>
+        </div>
+    </form>
+    
+
+</div>
